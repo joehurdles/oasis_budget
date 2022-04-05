@@ -55,7 +55,7 @@ return GestureDetector(
             ),
              ),
     
-            Text('GHC${(category.maxAmount - totalAmountSpent).toStringAsFixed(2)}/ GHC${(category.maxAmount).toStringAsFixed(2)}',
+            Text('₵${(category.maxAmount - totalAmountSpent).toStringAsFixed(2)}/ ₵${(category.maxAmount).toStringAsFixed(2)}',
              style: TextStyle(
               fontSize: 17.0,
               fontWeight: FontWeight.w600,

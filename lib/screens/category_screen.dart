@@ -14,6 +14,55 @@ final Category category;
 }
 
 class _CartegoryScreenState extends State<CartegoryScreen> {
+
+_buildExpenses() {
+  List<Widget> expenseList = [];
+  widget.category.expenses.forEach((Expense expense) {
+    expenseList.add(Container(
+      alignment: Alignment.center,
+      margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+      height: 80,
+      width: double.infinity,
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(10),
+        boxShadow: const [
+          BoxShadow(
+            color: Colors.black12,
+            offset: Offset(0, 2),
+            blurRadius: 6.0,
+          ),
+        ]
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(30.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              expense.name,
+              style: const TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            Text('-₵${expense.cost.toStringAsFixed(2)}',
+             style: const TextStyle(
+               color: Colors.red,
+                fontSize: 15,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+          ],
+        ),
+      ),
+    ));
+   });
+   return Column(
+     children: expenseList,
+   );
+}
+
   @override
   Widget build(BuildContext context) {
 double totalAmountSpent = 0;
@@ -62,7 +111,7 @@ final double percent = amountLeft / widget.category.maxAmount;
                child:
                  Center(
                    child: Text(
-                   'GHC${amountLeft.toStringAsFixed(2)}/ GHC${widget.category.maxAmount}',
+                   '₵${amountLeft.toStringAsFixed(2)}/ ₵${widget.category.maxAmount}',
                    style: const TextStyle(
                      fontSize: 19.0,
                      fontWeight: FontWeight.w600,
@@ -71,6 +120,7 @@ final double percent = amountLeft / widget.category.maxAmount;
                  ),
              ),
            ),
+           _buildExpenses(),
          ],
        )
         ), 

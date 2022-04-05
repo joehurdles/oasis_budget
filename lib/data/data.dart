@@ -17,12 +17,16 @@ final List<double> weeklySpending = [
 
 _generateExpenses() {
   List<Expense> expenses = [
-    Expense(name: 'Item 0', cost: rand.nextDouble() * 90),
     Expense(name: 'Item 1', cost: rand.nextDouble() * 90),
     Expense(name: 'Item 2', cost: rand.nextDouble() * 90),
     Expense(name: 'Item 3', cost: rand.nextDouble() * 90),
     Expense(name: 'Item 4', cost: rand.nextDouble() * 90),
     Expense(name: 'Item 5', cost: rand.nextDouble() * 90),
+    Expense(name: 'Item 6', cost: rand.nextDouble() * 90),
+    Expense(name: 'Item 7', cost: rand.nextDouble() * 90),
+    Expense(name: 'Item 8', cost: rand.nextDouble() * 90),
+    Expense(name: 'Item 9', cost: rand.nextDouble() * 90),
+    Expense(name: 'Item 10', cost: rand.nextDouble() * 90),
   ];
   return expenses;
 }

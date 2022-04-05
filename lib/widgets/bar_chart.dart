@@ -19,11 +19,11 @@ expenses.forEach((double price) {
 });
 
     return Padding(
-      padding: const EdgeInsets.all(12.0),
+      padding: const EdgeInsets.all(8.0),
       child: Column (
         children:  <Widget> [
           const Text('Weekly Spending',
-           style: TextStyle(fontSize: 20, 
+           style: TextStyle(fontSize: 18, 
            fontWeight: FontWeight.bold, 
            letterSpacing: 1.2,),
            ),
@@ -40,7 +40,7 @@ expenses.forEach((double price) {
 
         const Text('April 4, 2022 - April 11, 2022',
         style: TextStyle(fontWeight: FontWeight.w600,
-        fontSize: 17.0,
+        fontSize: 13.0,
         letterSpacing: 1.0),
         ),
 
@@ -56,37 +56,37 @@ Row(
   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
   crossAxisAlignment: CrossAxisAlignment.end,
   children: [
-      Bar(label:'Sun',
+      Bar(label:'Su',
       amountSpent:expenses[0], 
       mostExpensive: mostExpensive,
       ),
 
-       Bar(label:'Mon',
+       Bar(label:'Mo',
       amountSpent:expenses[1], 
       mostExpensive: mostExpensive,
       ),
 
-       Bar(label:'Tue',
+       Bar(label:'Tu',
       amountSpent:expenses[2], 
       mostExpensive: mostExpensive,
       ),
 
-       Bar(label:'Wed',
+       Bar(label:'We',
       amountSpent:expenses[3], 
       mostExpensive: mostExpensive,
       ),
 
-       Bar(label:'Thu',
+       Bar(label:'Th',
       amountSpent:expenses[4], 
       mostExpensive: mostExpensive,
       ),
 
-       Bar(label:'Fri',
+       Bar(label:'Fr',
       amountSpent:expenses[5], 
       mostExpensive: mostExpensive,
       ),
 
-       Bar(label:'Sat',
+       Bar(label:'Sa',
       amountSpent:expenses[6], 
       mostExpensive: mostExpensive,
       ),
@@ -113,7 +113,7 @@ final double _maxBarHeight = 150.0;
     final barHeight = amountSpent / mostExpensive * _maxBarHeight;
     return Column(
       children: [
-       Text('\GHC${amountSpent.toStringAsFixed(2)}',
+       Text('\₵${amountSpent.toStringAsFixed(2)}',
        style: const TextStyle(
          fontWeight: FontWeight.w600
        ),
@@ -121,7 +121,7 @@ final double _maxBarHeight = 150.0;
        const SizedBox(height:6.0),
        Container(
          height: barHeight,
-         width: 18.0,
+         width: 12.0,
          decoration: BoxDecoration(
            color:Theme.of(context).primaryColor,
            borderRadius: BorderRadius.circular(6.0),

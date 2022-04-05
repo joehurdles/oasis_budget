@@ -24,7 +24,7 @@ RadialPainter({
     ..style = PaintingStyle.stroke
     ..strokeWidth = width;
 
-     Paint CompletedLine = Paint()
+     Paint CompleteLine = Paint()
     ..color = lineColor
     ..strokeCap = StrokeCap.round
     ..style = PaintingStyle.stroke
@@ -38,7 +38,7 @@ RadialPainter({
       -pi / 2, 
       sweepAngle, 
       false,
-      CompletedLine,
+      CompleteLine,
       );
   }
 
